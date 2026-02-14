@@ -1,127 +1,208 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #222;
-    color: #fff;
-    margin: 10px;
-    padding: 0;
-    display: flex;
+/* =========================
+   BASE
+========================= */
+* { box-sizing: border-box; }
+
+:root{
+  --bg: #222;
+  --card: #333;
+  --accent: #be662b;
+  --text: #fff;
+  --textDark: #000;
+  --line: rgba(255,255,255,.12);
 }
 
-.menu {
-    width: 800px;
-    padding-top: 30px;
-    background-color: #333;
-    border-radius: 10px;
-    text-align: center;
+body{
+  margin: 0;
+  padding: 12px;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
-h1 {
-    margin: 0;
-    font-size: 4em;
+/* =========================
+   WRAPPER
+========================= */
+.menu{
+  width: 100%;
+  max-width: 920px;
+  background: var(--card);
+  border-radius: 16px;
+  text-align: center;
+  padding: clamp(16px, 3vw, 28px);
+  padding-top: clamp(18px, 4vw, 34px);
 }
 
-.para {
-    margin: 10px 0 20px;
-    font-size: 1.5rem;
-    color: #fff;
+h1{
+  margin: 0;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  letter-spacing: 1px;
 }
 
-section h3 {
-    font-size: 1.5em;
-    color: #000;
-    font-weight: 750;
-    background-color: #be662b;
-    padding: 10px;
-    border-radius: 40px;
-    display: inline-block;
-    margin: 0 auto 20px;
+.para{
+  margin: 10px 0 18px;
+  font-size: clamp(1rem, 3.2vw, 1.4rem);
+  opacity: .9;
 }
 
-.section {
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
+/* =========================
+   SECTIONS
+========================= */
+.block{ margin: 18px 0; }
+
+.section{
+  display: flex;
+  gap: 18px;
+  align-items: center;
 }
 
-.section ul {
-    list-style-type: none;
-    margin: 0px 70px 0px 70px;
-    padding: 0px;
-    text-align: left;
-    flex: 2;
+.text{
+  flex: 1;
+  min-width: 0;
+  text-align: left;
 }
 
-.section ul li {
-    font-size: 1.2em;
-    margin: 10px 0;
-    display: flex;
-    justify-content: space-between;
+/* Title pill */
+h3{
+  display: block;
+  width: min(620px, 100%);
+  margin: 0 auto 14px;
+  text-align: center;
+  font-size: clamp(1.05rem, 3.6vw, 1.5rem);
+  color: var(--textDark);
+  font-weight: 800;
+  background: var(--accent);
+  padding: 10px 18px;
+  border-radius: 999px;
 }
 
-.images {
-    background-color: #be662b;
-    width: 200px;
-    height: 280px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    border-radius: 50% 0 0 50%;
+/* Price list */
+.price-list{
+  list-style: none;
+  margin: 0;
+  padding: 0 28px;
 }
 
-.images1 {
-    background-color: #be662b;
-    width: 220px;
-    height: 280px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    border-radius: 0 50% 50% 0;
+.price-list li{
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: clamp(1rem, 3.4vw, 1.15rem);
 }
 
-.image-container {
-    width: 250px;
-    height: 250px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 80%;
-    margin: 0 20px;
+.price-list li span{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.main-course-image {
-    background-image: url('Main.png');
-    order: -1;
+.price-list li b{
+  white-space: nowrap;
+  font-weight: 900;
 }
 
-.appetizers-image {
-    background-image: url('appetizers.png');
+/* =========================
+   PHOTO BLOCK (ФОТО ДҰРЫС БОЛАДЫ)
+========================= */
+.media{
+  flex: 0 0 auto;
+  width: 240px;
+  height: 300px;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  overflow: hidden;
 }
 
-.beverages-image {
-    background-image: url('beverages.png');
-    order: -1;
+/* right block: rounded LEFT side */
+.media--right{
+  border-radius: 160px 0 0 160px;
 }
 
-.beverages-image {
-    background-image: url('beverages.png');
+/* left block: rounded RIGHT side */
+.media--left{
+  border-radius: 0 160px 160px 0;
 }
 
-.contact {
-    display: flex;
-    padding-left: 50px;
+/* image inside (circle on desktop) */
+.media__img{
+  width: 100%;
+  max-width: 210px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  background: rgba(0,0,0,.12);
 }
 
-.contact p {
-    background-color: #be662b;
-    font-weight: 700;
-    color: #000;
-    padding: 10px;
-    border-radius: 50px;
-    display: inline-block;
-    margin: 0 auto 20px;
+/* IMPORTANT: photo is not distorted */
+.media__img img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;      /* если полностью видеть надо: contain */
+  object-position: center;
+}
+
+/* =========================
+   CONTACT
+========================= */
+.contact{
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pill{
+  background: var(--accent);
+  color: var(--textDark);
+  font-weight: 900;
+  padding: 10px 14px;
+  border-radius: 999px;
+}
+
+/* =========================
+   MOBILE (Телефонға әдемі)
+========================= */
+@media (max-width: 768px){
+  body{ padding: 10px; }
+
+  .section{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .price-list{ padding: 0 10px; }
+
+  /* mobile: photo becomes a nice card (not weird cut) */
+  .media{
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    border-radius: 18px;
+    margin: 0 auto;
+    padding: 12px;
+  }
+
+  .media__img{
+    max-width: none;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 420px){
+  .pill{ width: 100%; text-align: center; }
 }
