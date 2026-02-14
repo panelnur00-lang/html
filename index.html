@@ -1,60 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Menu</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lounge Bar Menu</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="menu">
-        <h1>Lounge Bar</h1>
-        <p class="para"></p>
+  <main class="menu">
+    <h1>Lounge Bar</h1>
+    <p class="para">Меню</p>
 
-        <section>
-            <div class="section main-course">
-                <ul>
-                    <h3>ВИНО</h3>
-                    <li>БЕЛОЕ ПОЛУСЛАДКОЕ TELIANI 0,75МЛ <span>6.000₸</span></li>
-                    <li>БЕЛОЕ ПОЛУСЛАДКОЕ КАХЕТИНСКОЕ 0,75МЛ <span>6.000₸</span></li>
-                    <li>БЕЛОЕ ПОЛУСЛАДКОЕ ТВИШИ — 0,75МЛ <span>12.000₸</span></li>
-                    <li>КРАСНОЕ ПОЛУСЛАДКОЕ ХВАНЧКАРА — 0,75МЛ  <span>15.000₸</span></li>
-                    <li>КРАСНОЕ ПОЛУСЛАДКОЕ TELIANI — 0,75МЛ <span>6.000₸</span></li>
-                </ul>
-                <div class="images">
-                    <div class="image-container main-course-image"></div>
-                </div>
-            </div>
-        </section>
+    <!-- Холодные закуски -->
+    <section class="block">
+      <div class="section">
+        <div class="text">
+          <h3>ХОЛОДНЫЕ ЗАКУСКИ</h3>
 
-        <section>
-            <div class="section appetizers">
-                <div class="images1">
-                    <div class="image-container appetizers-image"></div>
-                </div>
-                <ul>
-                    <h3>МИЛКШЕЙК</h3>
-                    <li>БАНАНОВЫЙ 0,450МЛ  <span>1.490₸</span></li>
-                    <li>ЯГОДНЫЙ 0,450МЛ <span>1.490₸</span></li>
-                    <li>ШОКОЛАДНЫЙ 0,450МЛ <span>1.490₸</span></li>                  
-                </ul>
-            </div>
-        </section>
+          <ul class="price-list">
+            <li><span>МЯСНОЙ АССОРТИ</span><b>5.690₸</b></li>
+            <li><span>РЫБНЫЙ АССОРТИ</span><b>5.890₸</b></li>
+            <li><span>КУРИННЫЙ АССОРТИ</span><b>4.990₸</b></li>
+            <li><span>РУССКАЯ ЗАКУСКА</span><b>4.390₸</b></li>
+            <li><span>КАВКАЗСКИЙ АССОРТИ</span><b>4.090₸</b></li>
+            <li><span>БАБУШКИН ОГОРОД</span><b>3.790₸</b></li>
+            <li><span>СЫРНЫЙ АССОРТИ</span><b>7.990₸</b></li>
+            <li><span>СОЛЕНЬЯ</span><b>3.890₸</b></li>
+          </ul>
+        </div>
 
-        
+        <div class="media media--right">
+          <div class="media__img">
+            <img src="Main.png" alt="Холодные закуски" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-        
+    <!-- Милкшейк -->
+    <section class="block">
+      <div class="section">
+        <div class="media media--left">
+          <div class="media__img">
+            <img src="appetizers.png" alt="Милкшейк" />
+          </div>
+        </div>
 
-        <section class="contact">
-            <div class="contact-info">
-                <p><span class="icon">&#x1F4DE;</span> +7 776 458 77 88</p>
-                <p><span class="icon">&#x1F4CD;</span> Муса Джалиля 11Б</p>
-            </div>
-        </section>
+        <div class="text">
+          <h3>МИЛКШЕЙК</h3>
 
-    </div>
+          <ul class="price-list">
+            <li><span>БАНАНОВЫЙ 0,450МЛ</span><b>1.490₸</b></li>
+            <li><span>ЯГОДНЫЙ 0,450МЛ</span><b>1.490₸</b></li>
+            <li><span>ШОКОЛАДНЫЙ 0,450МЛ</span><b>1.490₸</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакт -->
+    <footer class="contact">
+      <div class="pill">📞 +7 776 458 77 88</div>
+      <div class="pill">📍 Муса Джалиля 11Б</div>
+    </footer>
+  </main>
 </body>
-
 </html>
