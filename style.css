@@ -244,3 +244,24 @@ h3{
 @media (max-width: 420px){
   .pill{ width: 100%; text-align: center; }
 }
+
+
+.price-list li.service{
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 2px dashed rgba(255,255,255,.25);
+  border-bottom: none;
+  align-items: center;
+}
+
+
+.price-list li.service span{
+  font-weight: 900;
+  opacity: 1;
+  white-space: nowrap;
+}
+
+.price-list li.service b{
+  font-weight: 900;
+  white-space: nowrap;
+}
