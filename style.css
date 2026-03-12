@@ -6,7 +6,7 @@
 :root{
   --bg: #222;
   --card: #333;
-  --accent: #1E3D29;
+  --accent: #be662b;
   --text: #fff;
   --textDark: #000;
   --line: rgba(255,255,255,.12);
@@ -265,4 +265,5 @@ h3{
   font-weight: 900;
   white-space: nowrap;
 }
+
 
